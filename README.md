@@ -1,61 +1,72 @@
-# Cadastro de Filmes - Projeto SQL Simples
+# 🎬 Cadastro de Filmes em SQL
 
-![SQL](https://img.shields.io/badge/Language-SQL-blue)
-![Build](https://img.shields.io/badge/build-passing-brightgreen)
+![SQL](https://img.shields.io/badge/SQL-MySQL-blue?logo=mysql&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Concluído-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Last Commit](https://img.shields.io/github/last-commit/JoaoVictorSouzaSilva/cadastro-filmes-sql)
 
-Este projeto é um banco de dados simples para cadastro de filmes, seus diretores e categorias, usando comandos SQL básicos.
+Projeto de banco de dados relacional para cadastro de filmes, diretores e categorias. O objetivo é praticar modelagem simples, relacionamentos com chaves estrangeiras e consultas SQL usando `JOIN`, filtros, agregações e ordenação.
 
----
+## 📂 Estrutura do banco
 
-## 📂 Estrutura do banco de dados
+O projeto possui três tabelas:
 
-O projeto contém três tabelas principais:
+- `diretores`: armazena os diretores cadastrados
+- `categorias`: armazena as categorias dos filmes
+- `filmes`: armazena título, ano e as referências ao diretor e à categoria
 
-- **diretores**: armazena os diretores de filmes (`id`, `nome`)
-- **categorias**: armazena as categorias dos filmes (`id`, `nome`)
-- **filmes**: armazena os filmes cadastrados (`id`, `titulo`, `ano`, `diretor_id`, `categoria_id`), com referências para diretores e categorias
+Relacionamentos:
 
----
+```text
+diretores 1 ---- N filmes N ---- 1 categorias
+```
 
-## ⚙️ O que o código faz
+## ⚙️ O que o script faz
 
-- Cria as tabelas e define os relacionamentos entre elas
-- Insere alguns dados de exemplo nas tabelas
-- Exemplos de consultas SQL para:
-  - Listar todos os filmes com seus respectivos diretores e categorias
-  - Filtrar filmes por diretor ou categoria
-  - Contar quantos filmes cada diretor possui cadastrado
+O arquivo `script.sql` contém:
 
----
+- criação do banco e das tabelas
+- definição de chaves primárias e estrangeiras
+- inserção de dados de exemplo
+- consulta de filmes com diretor e categoria
+- filtro por diretor
+- filtro por categoria
+- contagem de filmes por diretor
 
-## 🧪 Como testar o projeto
+## 🧪 Como testar
 
-Você pode testar este script SQL em qualquer banco de dados compatível com MySQL, como:
+O script foi escrito para MySQL e pode ser executado em ferramentas como:
 
-- [DB Fiddle (online)](https://www.db-fiddle.com/)
 - MySQL Workbench
 - DBeaver
-- MariaDB
+- MariaDB com pequenas adaptações, se necessário
+- ambientes online compatíveis com MySQL
 
-### Passos para testar no DB Fiddle:
+Execute o conteúdo de `script.sql` em uma conexão MySQL. As consultas de exemplo estão no final do próprio arquivo.
 
-1. Acesse [DB Fiddle](https://www.db-fiddle.com/)
-2. Cole o conteúdo do arquivo `script.sql` na área de "Schema SQL"
-3. Execute o script para criar as tabelas e inserir os dados
-4. Cole as consultas SQL na área "Query SQL" e execute para ver os resultados
+## 🧠 Conceitos praticados
 
----
+- `CREATE TABLE`
+- `PRIMARY KEY`
+- `FOREIGN KEY`
+- `INSERT`
+- `SELECT`
+- `JOIN`
+- `WHERE`
+- `COUNT`
+- `GROUP BY`
+- `ORDER BY`
 
-## 💻 Tecnologias usadas
+## 📁 Estrutura do repositório
 
-- SQL (MySQL)
+```text
+cadastro-filmes-sql/
+├── script.sql
+├── LICENSE
+└── README.md
+```
 
----
-
-## Autor
+## 👨‍💻 Autor
 
 João Victor de Souza Silva  
-[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-victor-souza-silva-9a6a2525b/)
-[GitHub](https://github.com/JoaoVictorSouzaSilva)
+[LinkedIn](https://www.linkedin.com/in/jo%C3%A3o-victor-souza-silva-9a6a2525b/) · [GitHub](https://github.com/JoaoVictorSouzaSilva)
